@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Youtube Redesign
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Clone of YouTube with a redesigned modern UI
 
 ## Available Scripts
 
