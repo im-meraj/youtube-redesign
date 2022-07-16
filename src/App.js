@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import styled, { ThemeProvider } from "styled-components";
+import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
+import { darkTheme, lightTheme } from "./utils/Theme";
+
+const Conatiner = styled.div`
+  display: flex;
+  `;
+
+const Main = styled.div`
+  flex: 7;
+`;
+
+const Wrapper = styled.div`
+  background-color: ${({theme}) => theme.bg};
+  color: ${({theme}) => theme.text};
+  padding: 20px;
+  font-size: 16px;
+  font-family: monospace;
+  ${'' /* height: 100%; */}
+`;
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme} >
+      <Conatiner>
+
+        <Menu />
+
+        <Main>
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Wrapper>
+            <h1>Hello World</h1>
+          </Wrapper>
+        </Main>
+        
+      </Conatiner>
+
+    </ThemeProvider>
+    </>
   );
 }
 
