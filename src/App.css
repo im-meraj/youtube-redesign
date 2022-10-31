@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html::-webkit-scrollbar-track {
+    background-color: #d8d8d8;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    background-color: #b6b6b6;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #32303e;
+    border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #4A4A4A;
+    border-radius: 4px;
+}

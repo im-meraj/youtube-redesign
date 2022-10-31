@@ -8,6 +8,7 @@ export const darkTheme = {
     searchIcon: '#474552',
     searchIconHover: '#5c5868',
     greyText: '#868394',
+    pulse: '#3ea6ff',
 }
 
 export const lightTheme = {
